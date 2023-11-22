@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<style>
+body{ background-image:url('photo.JPEG');
+ background-repeat:no-repeat;
+ background-size:100% 150%;
+ background-position:center;
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color:#2E4053 ;
+  color: white;
+  width:cover;
+}
+p.thin{font-weight:lighter;}
+
+</style>
+<head>
+    <style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#34495E ;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  color:#28B463 ;
+}
+ul{font-family: Calibri Light;}
+p{font-family:Calibri Light;}
+.myDiv {
+      
+      margin: auto;
+   width: 80%;
+ font-weight:100;
+  padding: 10px;
+    }
+p{font-weight: 100;}
+ .color{ border: 2px #2E4053 ;
+  padding: 0px;
+  background-color:#2E4053 ;
+  background-repeat: no-repeat;
+  background-size: cover;}
+  .social-media img{
+    height:30px;
+    margin:0 5px;
+}
+
+//blahh
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;
+     position: cover;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+</style>
+    <head>
+        <ul>
+           <li><img src="logo final.png" alt="logo" style=" width: 20%;height: 15%;"></li>
+          
+            <li><a class="active" href="trial2.html">HOME</a></li>
+            <li><a href="#news">SERVICES</a></li>
+            <li><a href="#contact">FRANCHISE</a></li>
+            <li><a href="prices2.html">PRICES</a></li>
+            <li><a href="#">STAIN SOLUTIONS</a></li>
+            <li><a href="login3.html">LOGIN/SIGNUP</a></li>
+            <li><a href="#about">CONTACT US</a></li>
+
+          </ul>
+          
+          <div class="color" >
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <img src="agra.jpeg" style="width:100%">
+                  <div class="text">Caption Text</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <img src="goa.jpeg" style="width:100%">
+                  <div class="text">Caption Two</div>
+                </div>
+                
+                <div class="mySlides fade">
+                 <img src="BANGALORE.JPEG" style="width:100%">
+                  <div class="text">Caption Three</div>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+                <script>
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
+                    
+                    function plusSlides(n) {
+                      showSlides(slideIndex += n);
+                    }
+                    
+                    function currentSlide(n) {
+                      showSlides(slideIndex = n);
+                    }
+                    
+                    function showSlides(n) {
+                      let i;
+                      let slides = document.getElementsByClassName("mySlides");
+                      let dots = document.getElementsByClassName("dot");
+                      if (n > slides.length) {slideIndex = 1}    
+                      if (n < 1) {slideIndex = slides.length}
+                      for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                      }
+                      for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      slides[slideIndex-1].style.display = "block";  
+                      dots[slideIndex-1].className += " active";
+                    }
+                    </script>
+
+        </div> 
+        
+        
+          
+</head>
+    <body>
+<div class="myDiv">
+</br></br><h2 style="font-family: Calibri Light;font-size: 200%;"><center><b>BEST LAUNDRY & DRY CLEANING SERVICE IN NITTE</b></center></h2>
+     <center>  <hr width="30%" size="10" color="#34495E" position="center;"> </center>
+    <center> <img src="city.webp" alt="how it works " position="center"></center>
+</br></br><h2 style="font-family: Calibri Light;font-size: 200%;"><center>MAKING TIME FOR BETTER THINGS IN LIFE</br></center></h2>
+<center>  <hr width="30%" size="10" color="#34495E" position="center;"> </center>
+<p style="font-weight:100;">SPINClIN provides you a complete package to cater for all your laundry needs - premium laundry service, regular washing, dry cleaning service, starching, ironing,
+     carpet/duvet/curtain cleaning, shoe & bag laundry and even suitcase, bag and shoe repairing services.</br></br></p>
+  <p class="thin">Long and irregular hours at work, a tiring commute and working on weekends can sap the energy out of most of us. And then there’s the laundry to do. It leaves us
+     wishing for quality family time, a time to put our feet up, relax and connect with people. This is where Spin SPINCLIN can come in handy for you. Our free pickup and
+      drop service will also save your busy time and let you enjoy your weekends in Bangalore. You also have the option of getting a more personalised
+       service by walking into our laundry store nearest to you.</br></br></p>   
+       <p>SPINCLIN is your neighbourhood one - stop - shop for all things clothes & related items. We make it a point to understand clothes and fabrics better. 
+        So be it laundry , dry cleaning those special clothes, steam ironing those washed clothes or cleaning your shoes and bags, you can trust your clothes to us. 
+        We will launder your clothes exactly as we will treat ours. With care.</br></br></p> 
+        <p>They will be packaged and sent to you in such a way that in no time you will start loving your wardrobe.</p>
+</div>
+<div class="myDiv">
+</br></br><h3 style="font-family: Calibri Light;font-size: 200%;"><center><b>WHY CHOOSE YOU</b></center></h3></div>
+<center>  <hr width="30%" size="10" color="#34495E" position="center;"> </center>
+<center><img src="dum.png" alt="how it works " position="center" width="90%"></center>
+
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <img src="photo.png" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="photo2.png" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+        
+        <div class="mySlides fade">
+         <img src="photo3.png" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+
+</div> 
+
+</body> 
+
+</header>
+
+<footer>
+  <div class="logo">
+    <p>&copy ; 2023N.M.A.INSTITUTION OF TECHNOLOGY.All rights reserved.</a>
+    <div  class="social-media">
+    <a herf="#"><img src="facebook.PNG" alt="Facebook"</a>
+    <a herf="#"><img src="twitter.PNG" alt="Twitter "</a>
+    <a herf="#"><img src="instagram.PNG " alt="Instagram"</a>
+    </div>
+</footer>
+
+</html>

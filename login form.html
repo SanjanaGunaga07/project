@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Calibri Light;
+      font-size: 200%;}
+
+input[type=text] {
+  width: 70%;
+  padding: 30px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 3px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 20px ;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  border-radius:30px;
+  font-size: 60%;
+  }
+
+button:hover {
+  opacity: 0.8;
+}
+
+.container {
+  padding: 10px;
+  width:50%;
+}
+
+span.psw {
+  float: right;
+  padding-top: 10px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+<center>
+</br></br></br></br></br>
+
+<form action="/action_page.php" method="post">
+ 
+  <div class="container">
+    <label for="number"><center>Login / Signup</center></label>
+    <input type="text" placeholder="YOUR PHONE" name="uname" required>
+
+    
+        
+    <button style="font-family:Calibri Light;" type="submit">Submit</button>
+   
+  </div>
+  <hr width="30%" size="2" color="gray" position="center;">
+  <div style="font-size: 50%;"><p>-OR-</p></div>
+  
+  <div style="font-size: 50%;"><p>You can also download our app to schedule a pickup, track order status, payments and etc.</p></div>
+  
+</center>
+</body>
+</html>
